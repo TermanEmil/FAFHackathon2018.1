@@ -20,6 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4207445627826430}
   - component: {fileID: 114511462271386656}
+  - component: {fileID: 95983619815521290}
+  - component: {fileID: 114354769851848780}
+  - component: {fileID: 114788382918639650}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -132,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4669474546545626}
   - component: {fileID: 212453043658012762}
+  - component: {fileID: 61435361332219130}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -146,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010947285372334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.485473, y: -0.71, z: -0.13656983}
+  m_LocalPosition: {x: -6.485473, y: -0.71, z: -0.1365698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4669474546545626}
@@ -275,6 +279,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!61 &61435361332219130
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928617856698392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!61 &61511621357144130
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -350,6 +379,71 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!95 &95983619815521290
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010947285372334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0206868b67cba49b898caf3478dbb6db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114354769851848780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010947285372334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5188aca147f4e97a59d54f798d7a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  targetObj: {fileID: 0}
+  activePos: {fileID: 0}
+  disabledPos: {fileID: 0}
+  onActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95983619815521290}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDisable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 95983619815521290}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Close
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114511462271386656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,10 +455,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ed522d2798344dc9564a607d28bddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 4669474546545626}
-  openPoint: {fileID: 4655023931434476}
-  closedPoint: {fileID: 4920317396653972}
-  closed: 1
+--- !u!114 &114788382918639650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010947285372334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 100
+    i1: 31
+    i2: 64
+    i3: 206
+    i4: 245
+    i5: 27
+    i6: 20
+    i7: 237
+    i8: 122
+    i9: 77
+    i10: 227
+    i11: 42
+    i12: 154
+    i13: 69
+    i14: 218
+    i15: 112
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!212 &212001622025286238
 SpriteRenderer:
   m_ObjectHideFlags: 1

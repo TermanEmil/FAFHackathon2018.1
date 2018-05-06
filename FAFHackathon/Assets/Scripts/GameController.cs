@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class GameController : MonoBehaviour
+public class GameController : NetworkBehaviour
 {
     public static GameController instance;
+    public NetworkManager networkManager;
 
 	private void Start()
 	{
@@ -13,7 +15,9 @@ public class GameController : MonoBehaviour
         else if (instance == null)
         {
             instance = this;
+
             DontDestroyOnLoad(gameObject);
+            networkManager = GetComponent<NetworkManager>();
         }
 	}
 }

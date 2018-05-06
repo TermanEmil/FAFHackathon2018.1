@@ -1,11 +1,19 @@
 ﻿<Properties StartupConfiguration="{158A24B5-6854-3EAB-A616-D98E3A33E010}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Dialog_Backup/DialogueManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameController.cs" Line="8" Column="5" />
-      <File FileName="Assets/Scripts/Door.cs" Line="13" Column="28" />
-      <File FileName="Assets/Editor/DoorEditor.cs" Line="11" Column="38" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="71" Column="26" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="22" Column="3" />
+      <File FileName="Assets/Scripts/Door.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="75" Column="5" />
+      <File FileName="Assets/Scripts/GravitationalBtn.cs" Line="45" Column="9" />
+      <File FileName="Assets/Scripts/TwoStateObject.cs" Line="26" Column="5" />
+      <File FileName="Assets/Scripts/CubeActivSpawner.cs" Line="19" Column="9" />
+      <File FileName="Assets/Scripts/CubeActivator.cs" Line="13" Column="20" />
+      <File FileName="Assets/Scripts/Jumper.cs" Line="23" Column="99" />
+      <File FileName="Assets/Scripts/Finish.cs" Line="22" Column="32" />
+      <File FileName="Assets/Editor/TwoStateObjectEditor.cs" Line="18" Column="10" />
+      <File FileName="Assets/Scripts/DialoguePlayerTrigger.cs" Line="27" Column="1" />
+      <File FileName="Assets/Dialog_Backup/DialogueManager.cs" Line="80" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
